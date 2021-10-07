@@ -16,7 +16,7 @@ const image = await loadImage("BESCII.png");
 ctx.drawImage(image, 0, 0);
 for (let y = 0; y < FONT_MAP_HEIGHT; y += 1) {
   for (let x = 0; x < FONT_MAP_WIDTH; x += 1) {
-    if (x === 16 && y === 13) {
+    if (x === parseInt(process.argv[3]) && y === parseInt(process.argv[2])) {
       const { data } = ctx.getImageData(
         x * FONT_WIDTH,
         y * (FONT_HEIGHT + FONT_HEIGHT_BOTTOM),
